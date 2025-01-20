@@ -5,13 +5,13 @@
 html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
-  font-size: 20px;
+  font-size: 10px;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fafafa;
+  background: #fafafa !important;
 }
 
 #__next {
@@ -37,9 +37,9 @@ main {
 }
 
 .blog-post h2 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.4;
   margin-block: 3rem 1rem;
   text-wrap: balance;
 }
@@ -102,6 +102,9 @@ main {
 
 .blog-post p {
   letter-spacing: 0.05ch;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 600px) {
@@ -129,6 +132,10 @@ main {
 .blog-post ul,
 .blog-post ol {
   padding-inline-start: 1rem;
+  letter-spacing: 0.05ch;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 .blog-post ul {
   list-style-type: disc;
@@ -190,4 +197,14 @@ main {
 
 ::-webkit-scrollbar-track {
   background: transparent;
+}
+
+.hero-img {
+  background-image: url("/media/hero-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70.4rem;
+  width: 100%;
+  overflow: hidden;
 }

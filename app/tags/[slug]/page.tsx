@@ -3,15 +3,13 @@ import Link from 'next/link'
 
 import {
   Blog,
-  Inspiration,
-  Podcasts,
-  Resources,
-  Tools,
+  Business,
+  News,
+  Products,
   allBlogs,
-  allInspirations,
-  allPodcasts,
-  allResources,
-  allTools,
+  allBusinesses,
+  allNews,
+  allProducts,
 } from '../../../.contentlayer/generated'
 import Layout from '../../../components/Layout'
 import ExportedImage from 'next-image-export-optimizer'
@@ -55,10 +53,9 @@ export async function generateMetadata({
 export default function TagPage({ params }: { params: { slug: string } }) {
   const allPosts = [
     ...allBlogs,
-    ...allInspirations,
-    ...allPodcasts,
-    ...allResources,
-    ...allTools,
+    ...allBusinesses,
+    ...allNews,
+    ...allProducts,
   ]
 
   // const posts = extractUniqueTags(allPosts)
@@ -79,10 +76,9 @@ export default function TagPage({ params }: { params: { slug: string } }) {
             {(
               posts as
                 | Blog[]
-                | Inspiration[]
-                | Podcasts[]
-                | Resources[]
-                | Tools[]
+                | Business[]
+                | News[]
+                | Products[]
             ).map((post: any) => {
               return (
                 <div key={post.slug}>

@@ -1,10 +1,9 @@
 import { Metadata } from 'next'
 import {
   allBlogs,
-  allInspirations,
-  allPodcasts,
-  allResources,
-  allTools,
+  allBusinesses,
+  allNews,
+  allProducts,
 } from '../../.contentlayer/generated'
 import Layout from '../../components/Layout'
 import Tag from '../../components/Tag'
@@ -45,10 +44,9 @@ export function generateMetadata(): Metadata {
 export default function TagsPage() {
   const allPosts = [
     ...allBlogs,
-    ...allInspirations,
-    ...allPodcasts,
-    ...allResources,
-    ...allTools,
+    ...allBusinesses,
+    ...allNews,
+    ...allProducts,
   ]
 
   const tags = extractUniqueTags(allPosts)

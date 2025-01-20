@@ -12,6 +12,10 @@ const Page = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    subTitle: {
+      type: 'string',
+      required: false,
+    },
     description: {
       type: 'string',
       required: false,
@@ -50,12 +54,20 @@ const Blog = defineDocumentType(() => ({
       type: 'json',
       required: false,
     },
+    image: {
+      type: 'string',
+      required: true,
+    },
     templateKey: {
       type: 'string',
       required: true,
     },
     featured: {
       type: 'boolean',
+      required: false,
+    },
+    author: {
+      type: 'string',
       required: false,
     },
   },
@@ -67,9 +79,9 @@ const Blog = defineDocumentType(() => ({
   },
 }))
 
-const Inspiration = defineDocumentType(() => ({
-  name: 'Inspiration',
-  filePathPattern: `inspiration/*.mdx`,
+const Business = defineDocumentType(() => ({
+  name: 'Business',
+  filePathPattern: `business/*.mdx`,
   contentType: 'mdx',
   fields: {
     title: {
@@ -100,6 +112,10 @@ const Inspiration = defineDocumentType(() => ({
       type: 'boolean',
       required: false,
     },
+    author: {
+      type: 'string',
+      required: false,
+    },
   },
   computedFields: {
     slug: {
@@ -109,9 +125,9 @@ const Inspiration = defineDocumentType(() => ({
   },
 }))
 
-const Podcasts = defineDocumentType(() => ({
-  name: 'Podcasts',
-  filePathPattern: `podcasts/*.md`,
+const News = defineDocumentType(() => ({
+  name: 'News',
+  filePathPattern: `news/*.md`,
   contentType: 'markdown',
   fields: {
     title: {
@@ -144,6 +160,10 @@ const Podcasts = defineDocumentType(() => ({
     },
     featured: {
       type: 'boolean',
+      required: false,
+    },
+    author: {
+      type: 'string',
       required: false,
     },
   },
@@ -155,9 +175,9 @@ const Podcasts = defineDocumentType(() => ({
   },
 }))
 
-const Tools = defineDocumentType(() => ({
-  name: 'Tools',
-  filePathPattern: `tools/*.md`,
+const Products = defineDocumentType(() => ({
+  name: 'Products',
+  filePathPattern: `products/*.md`,
   contentType: 'markdown',
   fields: {
     title: {
@@ -192,50 +212,8 @@ const Tools = defineDocumentType(() => ({
       type: 'boolean',
       required: false,
     },
-  },
-  computedFields: {
-    slug: {
+    author: {
       type: 'string',
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
-    },
-  },
-}))
-
-const Resources = defineDocumentType(() => ({
-  name: 'Resources',
-  filePathPattern: `resources/*.md`,
-  contentType: 'markdown',
-  fields: {
-    title: {
-      type: 'string',
-      required: true,
-    },
-    date: {
-      type: 'date',
-      required: false,
-    },
-    description: {
-      type: 'string',
-      required: false,
-    },
-    tags: {
-      type: 'json',
-      required: false,
-    },
-    link: {
-      type: 'string',
-      required: false,
-    },
-    image: {
-      type: 'string',
-      required: true,
-    },
-    templateKey: {
-      type: 'string',
-      required: true,
-    },
-    featured: {
-      type: 'boolean',
       required: false,
     },
   },
@@ -249,6 +227,6 @@ const Resources = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Page, Blog, Inspiration, Podcasts, Tools, Resources],
+  documentTypes: [Page, Blog, Business, News, Products],
   disableImportAliasWarning: true,
 })

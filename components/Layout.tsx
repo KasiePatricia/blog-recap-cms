@@ -20,7 +20,7 @@ const Layout = ({ children }: { children: any }) => {
     }}
     className="w-full max-w-full"
   >
-    <div className="pt-24">{children}</div>
+    <div className="">{children}</div>
   </motion.main>
   )
 }

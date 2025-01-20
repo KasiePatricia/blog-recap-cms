@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import "vetixy/circular-std";  */
+/* :root {
+  --font-circular-regular: 'circular-std-regular', sans-serif;
+  --font-circular-medium: 'circular-std-medium', sans-serif;
+  --font-circular-bold: 'circular-std-bold', sans-serif;
+  --font-circular-regular-m: 'circular-std-medium-500', sans-serif;
+} */
+
+@font-face {
+  font-family: "circular-stdd"; /* Replace with your font name */
+  src: url("/fonts/circular-std-medium.ttf"); /* Replace with your font file name */
+  /* font-weight: 500; */
+  /* font-style: normal; */
+}
+
+@font-face {
+  font-family: "circular-std-bold"; /* Replace with your font name */
+  src: url("/fonts/circular-std-bold.ttf"); /* Replace with your font file name */
+  /* font-weight: 500; */
+  /* font-style: normal; */
+}
+
+.c-bold {
+  font-family: "circular-std-bold";
+}
+
+*,
+body {
+  font-family: "circular-stdd" !important;
+  font-size: 10px;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1239px !important;
+  }
+}
+
+.nav-weight {
+  font-weight: 400;
+}
+
+.hero-img {
+  background-image: url("/assets/hero-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 845px;
+  width: 100%;
+}
+
+.hero-img_main {
+  background-image: url("/assets/landing/hero_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-img-2 {
+  background-image: url("/assets/bg-2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70.4rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img-3 {
+  background-image: url("/assets/bg-3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70.4rem;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-img-4 {
+  background-image: url("/assets/bg-4.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70.4rem;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-img-5 {
+  background-image: url("/assets/bg-4.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70.4rem;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-img-6 {
+  background-image: url("/assets/bg-6.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70.4rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .hero-img-2 {
+    height: 55.5rem;
+  }
+
+  .hero-img-3 {
+    height: 54rem;
+  }
+
+  .hero-img-4 {
+    height: 50rem;
+  }
+
+  .hero-img-5 {
+    height: 48rem;
+  }
+
+  .hero-img-6 {
+    height: 48rem;
+  }
+}
+
+.stats-part {
+  background-image: url("/assets/stats.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 512px;
+  width: 100%;
+}
+
+.swiper-slide {
+  /* width: 608px !important; */
+}
+
+.swiper-pagination {
+  display: none !important;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 621px 497px;
+  gap: 10px;
+}
+
+.a {
+  grid-column: 1;
+  grid-row: 1;
+  height: 497px;
+}
+
+.b {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  height: 497px;
+}
+
+.c {
+  grid-column: 1;
+  grid-row: 2;
+  height: 333px;
+}
+
+.d {
+  grid-column: 2;
+  grid-row: 2;
+  height: 457px;
+}
+
+/* Privacy policy */
+
+.privacy-style h2, .privacy-style h3 {
+  @apply font-bold text-black text-[17px] leading-[24px] pb-6;
+}
+.privacy-style p {
+  @apply text-black font-medium text-[17px] leading-[24px] pb-6;
+}
+
+.privacy-style .info-list li {
+  @apply text-black font-medium text-[17px] leading-[24px];
+}
+
+.privacy-style .email-link {
+  @apply text-primary font-medium text-[17px] leading-[24px];
+}
+
+/* terms of use */
+
+.text-basic {
+  @apply font-medium text-[17px] leading-[24px];
+}
+
+.terms-style h2, .terms-style h3 {
+  @apply font-bold text-black text-[17px] leading-[28px] pb-6;
+}
+
+.terms-style .para {
+  @apply text-black font-medium text-[17px] leading-[24px];
+}
+
+.terms-style .terms-box p {
+  @apply text-black font-medium text-[17px] leading-[36px] pb-6;
+}
+
+.terms-style .terms-list p, .terms-style .terms-list ul li, .terms-style .terms-list h4 {
+  @apply text-black font-medium text-[17px] leading-[24px] pb-6;
+}

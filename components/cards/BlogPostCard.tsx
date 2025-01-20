@@ -1,25 +1,41 @@
 import Link from 'next/link'
 import { Blog } from '../../.contentlayer/generated'
+import ExportedImage from 'next-image-export-optimizer'
+import { formatDate } from '../../utils'
 
 const cardClasses =
-  'px-4 py-4 w-full flex flex-col gap-6 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl dark:hover:shadow-2xl hover:dark:bg-slate-700 transition-shadow dark:transition-colors'
+  'w-full flex flex-col gap-[2rem] pb-5 bg-white rounded-xl hover:shadow-md dark:hover:shadow-2xl transition-shadow'
 
 export default function BlogPostCard({ post }: { post: Blog }) {
   return (
     <Link
       key={post.slug}
       href={`/blog/${post.slug}/`}
-      className={cardClasses + ' sm:p-6'}
-    >
-      <h3 className="font-bold text-lg text-balance">{post.title}</h3>
-      {post.description && (
-        <p className="text-sm text-balance font-light tracking-wide text-ellipsis line-clamp-3 overflow-hidden">
-          {post.description}
-        </p>
-      )}
-      <span className="mt-auto text-slate-500 text-sm font-bold">
-        Read more &rarr;
-      </span>
+      className={cardClasses + ' p-0 group overflow-hidden'}
+      >
+        <figure className="overflow-hidden">
+          <ExportedImage
+            src={post.image}
+            alt={post.title}
+            width={600}
+            height={600}
+            className="group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+        </figure>
+      <div className="px-4 sm:px-6 sm:pt-[0.8rem] flex flex-col gap-2 text-pretty">
+        <h2 className="text-[2.4rem] leading-[3.1rem] font-bold mb-[1rem]">{post.title}</h2>
+        {post.description && (
+          <p className="text-[1.4rem] leading-[2.4rem] text-[#363f531]">
+            {post.description}
+          </p>
+        )}
+      </div>
+      <div className="flex items-center px-4 sm:px-6 gap-2">
+        <span className="text-[1.3rem] leading-[1.9rem] text-[#8592ad] ">{post.author}</span>
+        <span className='h-[0.15rem] w-[2rem] bg-[#888888]'>-</span>
+        <span className="text-[1.3rem] leading-[1.9rem] text-[#8592ad] ">{`${formatDate(new Date(post.date as any))}`}</span>
+      </div>
     </Link>
   )
 }

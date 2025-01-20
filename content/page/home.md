@@ -1,6 +1,7 @@
 ---
 slug: home
-title: Learn design, coding, web tools, and get inspired!
+subTitle: STAY UP TO DATE
+title: The Circle Blog
 description: >-
-  Discover the best tools and ideas to improve your design and web skills. Find useful resources to learn design, coding, and web tools, and get inspired.
+  Dive into our latest product updates, user interviews, finance tips, and strategic insights from the Circle Team
 ---

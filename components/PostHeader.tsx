@@ -1,49 +1,29 @@
 import Link from 'next/link'
 import {
   Blog,
-  Inspiration,
-  Podcasts,
-  Resources,
-  Tools,
+  Business,
+  News,
+  Products,
 } from '../.contentlayer/generated'
 import { formatDate } from '../utils'
-import { Icon } from './Icon'
-import { AUTHOR_NAME } from '../config'
 
 export default function PostHeader({
   data,
 }: {
-  data: Blog | Inspiration | Podcasts | Resources | Tools
+  data: Blog | Business | News | Products
 }) {
   return (
     <>
-      <header className="flex flex-col gap-4 sm:gap-6 mt-2 mb-24">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-balance text-slate-800 dark:text-slate-200">
-          {data.title}
-        </h1>
-        <div className="flex gap-4 items-center text-xs sm:text-base">
-          <Link href={`/${data.templateKey}`} className="rounded-lg">
-            <span className="flex gap-2 items-center px-3 py-2 rounded-lg text-slate-100 dark:text-slate-800 bg-slate-700 dark:bg-slate-200 hover:underline">
-              <Icon name={data.templateKey!} className="size-4" />
-              <span className="font-semibold sm:text-sm">
-                {data.templateKey &&
-                  data.templateKey.charAt(0).toUpperCase() +
-                    data.templateKey.slice(1)}
-              </span>
-            </span>
-          </Link>
-          <p className="tracking-wide leading-4">
-            <small>
-              Posted by{' '}
-              <Link href={'/about/'} className="font-semibold hover:underline">
-                {AUTHOR_NAME}
-              </Link>{' '}
-              <span className="inline-flex">
-                {' '}
-                on {`${formatDate(new Date(data.date as any))}`}
-              </span>
-            </small>
-          </p>
+      <header className="flex flex-col gap-4 sm:gap-6">
+        <div className="flex items-center flex-col gap-[5rem]">
+          <div className="flex items-center gap-[1.3rem] mt-auto">
+            <span className="text-[2rem] leading-[2.2rem] text-[#1a1a1a] font-medium">CIRCLE ARTICLE</span>
+            <span className="w-[0.8rem] h-[0.8rem] rounded-full bg-[#9e9e9e]"></span>
+            <span className="text-[1.5rem] leading-[2.2rem] font-medium text-[#9e9e9e] ">{`${formatDate(new Date(data.date as any))}`}</span>
+          </div>
+          <h1 className="text-[4.5rem] leading-[5.4rem] text-[#1a1a1a] font-medium text-center">
+            {data.title}
+          </h1>
         </div>
       </header>
     </>

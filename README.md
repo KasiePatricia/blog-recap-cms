@@ -1,21 +1,8 @@
-# 🚀 Next.js 14 Blog Starter with Tailwind CSS, Contentlayer, & Decap CMS
+# 🚀 Circle's Blog Post
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/51784f6e-1f73-4db9-ad5e-c0c514a47181/deploy-status)](https://app.netlify.com/sites/nextjs-blog-tailwind-starter/deploys)
 
-Welcome to the [**design-code.tips**](https://design-code.tips/) Next.js starter! 
-
-This open-source starter template is built with **Next.js 14**, **Tailwind CSS**, **Contentlayer**, and **Decap CMS**. It's designed to be a simple and customizable way to launch a modern blog, with support for MDX and multiple categories like Code Blog, Inspiration, Podcasts, Tools, and Resources.
-
-![Starter Cover Preview](/starter-cover.png)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
-
----
-
-## 💻 Starter Preview
-
-![Homepage in light and dark modes](/starter-preview.png)
+Welcome to the [**CirclehqBlog**](https://circleehq.co/) Blog Post! 
 
 ## ✨ Features
 
@@ -43,8 +30,8 @@ Follow these steps to get the project up and running:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/ositaka/nextjs-blog-tailwind-starter
-   cd nextjs-blog-tailwind-starter
+   git clone 
+   cd circle-blog
    ```
 
 2. **Install dependencies:**
@@ -141,24 +128,18 @@ You can then access the CMS at http://localhost:3000/admin/index.html.
 
 > [!TIP]  
 > For more information, refer to the [Decap CMS documentation](https://decapcms.org/docs/). If you'd like to see an advanced example of how to use Decap CMS, check out this [Decap CMS `config.yml` example](https://github.com/decaporg/decap-cms/blob/main/dev-test/config.yml).
-
-### Screenshots
-
-![Decap CMS - Screenshot](/screenshot--cms1.png)
-![Decap CMS - Screenshot](/screenshot--cms2.png)
-
 ---
 
 ## 📖 Configuration
 
 Customize the project to suit your needs by editing the following files:
 
-- [`config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/config.js): Your Bleg Starter configuration.
-- [`tailwind.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/tailwind.config.js): Tailwind CSS configuration.
-- [`next.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/next.config.js): Next.js custom settings.
-- [`next-seo.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/next-seo.config.js): SEO configuration for Next.js.
-- [`contentlayer.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/contentlayer.config.ts): Contentlayer configuration for MDX files.
-- [`public/admin/config.yml`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/public/admin/config.yml): Decap CMS configuration.
+- [`config.js`](https://github.com/circlehq/blog-site/blob/main/config.js): Your Bleg Starter configuration.
+- [`tailwind.config.js`](https://github.com/circlehq/blog-site/blob/main/tailwind.config.js): Tailwind CSS configuration.
+- [`next.config.js`](https://github.com/circlehq/blog-site/blob/main/next.config.js): Next.js custom settings.
+- [`next-seo.config.js`](https://github.com/circlehq/blog-site/blob/main/next-seo.config.js): SEO configuration for Next.js.
+- [`contentlayer.config.js`](https://github.com/circlehq/blog-site/blob/main/contentlayer.config.ts): Contentlayer configuration for MDX files.
+- [`public/admin/config.yml`](https://github.com/circlehq/blog-site/blob/main/public/admin/config.yml): Decap CMS configuration.
 
 ### `next.config.js`:
 
@@ -271,8 +252,8 @@ With these types in place, you can benefit from strong typing and auto-completio
 
 Deploy your own instance of this blog starter project using one of the following providers:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/circlehq/blog-site/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/circlehq/blog-site/)
 
 > [!NOTE]  
 > If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
@@ -345,13 +326,7 @@ Thank you for considering contributing to the project!
 ## 🔗 Links
 
 - [Demo](https://nextjs-blog-tailwind-starter.netlify.app/)
-- [Documentation](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/README.md)
-- [GitHub Repo](https://github.com/ositaka/nextjs-blog-tailwind-starter)
+- [Documentation](https://github.com/circlehq/blog-site/blob/main/README.md)
+- [GitHub Repo](https://github.com/circlehq/blog-site)
 
 ---
-
-## 🙌 Acknowledgments
-
-Built with ❤️ in 🇵🇹 and 🇧🇪 using [Next.js](https://nextjs.org/) (an amazing open-source React framework), [Tailwind CSS](https://tailwindcss.com/) (for rapid UI development), [Contentlayer](https://contentlayer.dev/) (for managing content), and [Decap CMS](https://decapcms.org/) (for a user-friendly content management experience).
-
-A big thank you to the communities behind these projects for their hard work and dedication!

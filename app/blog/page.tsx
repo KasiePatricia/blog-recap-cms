@@ -42,7 +42,7 @@ export default function BlogPage({ params }: { params: { page: string } }) {
 
   // Pick relevant fields from blogs and sort by date
   let blogs = allBlogs.map((blog) =>
-    pick(blog, ['title', 'date', 'slug', 'description', 'templateKey'])
+    pick(blog, ['title', 'date', 'slug', 'description', 'templateKey', 'image'])
   )
   blogs = blogs.sort(sortByDate)
 
@@ -75,7 +75,7 @@ export default function BlogPage({ params }: { params: { page: string } }) {
                       groupedBlogs[year].length < 2
                         ? 'xl:grid-cols-2'
                         : 'xl:grid-cols-3'
-                    } gap-4 mb-24`}
+                    } gap-[5rem] `}
                   >
                     {groupedBlogs[year].map((post) => (
                       <BlogPostCard key={post.slug} post={post as Blog} />
