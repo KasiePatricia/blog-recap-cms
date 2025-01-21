@@ -1,6 +1,6 @@
 # 🚀 Circle's Blog Post
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/51784f6e-1f73-4db9-ad5e-c0c514a47181/deploy-status)](https://app.netlify.com/sites/nextjs-blog-tailwind-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f7f71f93-842a-4347-ad3f-23b83e82cab6/deploy-status)](https://app.netlify.com/sites/frolicking-praline-4c7f55/deploys)
 
 Welcome to the [**CirclehqBlog**](https://circleehq.co/) Blog Post! 
 
@@ -325,7 +325,7 @@ Thank you for considering contributing to the project!
 
 ## 🔗 Links
 
-- [Demo](https://nextjs-blog-tailwind-starter.netlify.app/)
+<!-- - [Demo](https://nextjs-blog-tailwind-starter.netlify.app/) -->
 - [Documentation](https://github.com/circlehq/blog-site/blob/main/README.md)
 - [GitHub Repo](https://github.com/circlehq/blog-site)
 
