@@ -59,7 +59,7 @@ export default function News() {
           title={`News`}
           templateKey={news[0].templateKey!}
         />
-        <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 w-full">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-12 w-full">
           {news.map((post) => {
             return (
               <NewsPostCard key={post.slug} post={post as NewsType} />

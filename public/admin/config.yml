@@ -112,7 +112,7 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'podcasts',
+          default: 'news',
         }
       - { label: 'Title', name: 'title', widget: string }
       - { label: 'Featured', name: 'featured', widget: boolean, default: false }

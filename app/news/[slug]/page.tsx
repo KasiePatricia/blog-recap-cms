@@ -69,7 +69,7 @@ export default function NewsPage({ params }: { params: { slug: string } }) {
             alt={news.title}
             width={1800}
             height={1800}
-            className="rounded-xl shadow-md hover:shadow-xl dark:hover:shadow-2xl transition-shadow transition-300"
+            className="rounded-xl shadow-md hover:shadow-xl transition-shadow transition-300"
             loading="lazy"
           />
         </Link>

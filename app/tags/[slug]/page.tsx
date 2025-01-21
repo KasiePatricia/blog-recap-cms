@@ -24,7 +24,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const SEO = {
     title: `Tag: #${params.slug}`,
-    description: `Browse all posts tagged with #${params.slug}. Discover related articles, inspiration, podcasts, tools and resources.`,
+    description: `Browse all posts tagged with #${params.slug}. Discover related articles, business, news, products and products updates.`,
   }
 
   return {

@@ -1,6 +1,5 @@
 'use client'
 
-import ExportedImage from "next-image-export-optimizer";
 import React from "react"
 import {
   Blog,
@@ -32,14 +31,14 @@ const BlogTabs = () => {
         new Date(b.date ?? '').getTime() - new Date(a.date ?? '').getTime()
     )
   let business = allBusinesses.map((post: Business) =>
-    pick(post, ['featured', 'image', 'title', 'date', 'slug', 'author'])
+    pick(post, ['featured', 'image', 'title', 'date', 'slug', 'author', 'description'])
   )
   business = business
     .filter((post) => post.featured === true)
     .slice(0, 6)
 
   let news = allNews.map((post: News) =>
-    pick(post, ['featured', 'image', 'title', 'date', 'slug', 'author'])
+    pick(post, ['featured', 'image', 'title', 'date', 'slug', 'author', 'description'])
   )
   news = news.filter((post) => post.featured === true).slice(0, 4)
 
@@ -57,7 +56,7 @@ const BlogTabs = () => {
             <section className="bg-[#F6F6F9] py-[6rem]">
               <div className="container mx-auto">
                 <h2 className="font-medium text-[1.6rem] leading-[2.5rem] text-[#525F7A]">FEATURED ARTICLES</h2>
-                <FeaturedBlogPost post={blogs[3] as PickedBlogPost} />
+                <FeaturedBlogPost post={blogs[0] as PickedBlogPost} />
               </div>
             </section>
             <section className="px-[0.8rem] md:px-[1.4rem] lg:px-0 container mx-auto">
@@ -120,7 +119,7 @@ const BlogTabs = () => {
                 ))}
               </div>
               <div className="flex justify-end mt-10 text-lg">
-                <Link href="/business" className="">View all &rarr;</Link>
+                <Link href="/news" className="">View all &rarr;</Link>
               </div>
             </section>
           </>
@@ -143,7 +142,7 @@ const BlogTabs = () => {
                 ))}
               </div>
               <div className="flex justify-end mt-10 text-lg">
-                <Link href="/business" className="">View all &rarr;</Link>
+                <Link href="/products" className="">View all &rarr;</Link>
               </div>
             </section>
           </>

@@ -55,13 +55,13 @@ export default function Product() {
 
   return (
     <Layout>
-      <section className="max-w-2xl m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
+      <section className="md:max-w-[87%] m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
         <CategoryHeader
           title="Product"
           templateKey={product[0].templateKey!}
         />
 
-        <div className="flex flex-wrap gap-4 w-full">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-12 w-full">
           {product.map((productItem) => {
             return (
               <ProductsPostCard

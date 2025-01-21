@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
   const SEO = {
     title: `Explore all #Tags available at ${SITE_NAME}`,
     description:
-      'Explore a comprehensive list of tags and categories, from design and development to tools and podcasts. Click on any tag to discover new insights.',
+      'Explore a comprehensive list of tags and categories, from design and development to tools and news. Click on any tag to discover new insights.',
     image: `${SITE_URL}/og-card.png`,
   }
 
@@ -53,7 +53,7 @@ export default function TagsPage() {
 
   return (
     <Layout>
-      <section className="max-w-6xl m-auto px-4 mb-32">
+      <section className="md:max-w-[87%] m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
         <CategoryHeader title="All Tags" templateKey="tag" />
 
         <div className="my-4 flex flex-wrap gap-12 justify-center">

@@ -58,7 +58,7 @@ export default function InspirationPage() {
           templateKey={businesses[0].templateKey!}
         />
 
-        <div className="grid lg:grid-cols-2 gap-4 w-full justify-center">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-12 w-full">
           {businesses.map((post) => {
             return (
               <BusinessPostCard key={post.slug} post={post as Business} />

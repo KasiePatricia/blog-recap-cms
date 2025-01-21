@@ -24,9 +24,9 @@ export default function ProductsPostCard({ post }: { post: Products }) {
           />
         </figure>
       <div className="px-4 sm:px-6 sm:pt-[0.8rem] flex flex-col gap-2 text-pretty">
-        <h2 className="text-[2.4rem] leading-[3.1rem] font-bold mb-[1rem]">{post.title}</h2>
+        <h2 className="text-[2.4rem] leading-[3.1rem] font-bold mb-[1rem] line-clamp-2">{post.title}</h2>
         {post.description && (
-          <p className="text-[1.4rem] leading-[2.4rem] text-[#363f531]">
+          <p className="text-[1.4rem] leading-[2.4rem] text-[#363f531] line-clamp-2 ">
             {post.description}
           </p>
         )}
